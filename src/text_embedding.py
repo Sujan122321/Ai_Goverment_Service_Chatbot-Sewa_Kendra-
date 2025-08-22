@@ -2,8 +2,11 @@ import os
 import numpy as np
 import google.generativeai as genai
 from dotenv import load_dotenv
-from document_loader import load_and_chunk_all_pdfs
-from vector_database import build_vector_store, save_vector_store, load_vector_store, search
+
+# Use relative imports because this file is inside src/
+from .document_loader import load_and_chunk_all_pdfs
+from .vector_database import build_vector_store, save_vector_store, load_vector_store, search
+
 
 # Load API key from .env
 load_dotenv()
