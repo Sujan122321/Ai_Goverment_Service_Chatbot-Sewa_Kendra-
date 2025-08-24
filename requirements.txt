@@ -7,3 +7,7 @@ SpeechRecognition==3.14.3
 pyttsx3==2.99 
 soundfile==0.13.1
 streamlit==1.48.1
+pydub==0.25.1
+PyAudio==0.2.14
+gtts==2.5.4
+Elevenlabs==2.11.0
