@@ -84,11 +84,9 @@ def generate_answer_with_rag(question):
     prompt = f"तपाईंलाई निम्न सन्दर्भको आधारमा नेपालीमा छोटो, सरल र स्पष्ट उत्तर दिनुहोस्:\n\n{context}\n\nप्रश्न: {question}\n\nउत्तर:"
     
     try:
-        response = genai.chat.create(
-            model="gemini-2.0-turbo",
-            messages=[{"author": "user", "content": prompt}]
-        )
-        return response.last.message.content
+        model=genai.GenerativeModel('gemini-2.0-flash-lite')
+        response = model.generate_content(prompt)
+        return response.text
     except Exception as e:
         st.error(f"❌ Gemini failed: {e}")
         return "माफ गर्नुहोस्, अहिले उत्तर उपलब्ध छैन।"
