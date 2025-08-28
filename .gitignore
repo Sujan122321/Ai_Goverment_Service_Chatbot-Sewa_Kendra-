@@ -1,3 +1,14 @@
+# Datasets
+datasets
+
+# audio file 
+*.wav
+*.mp3
+
+# Vector and pkl file
+*.pkl
+*.index
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
